@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">FastShop</string>
+
+    <string name="cart">cart</string>
+    <string name="all_goods">all goods</string>
+    <string name="home_page">home page</string>
+    <string name="announced_the_latest">announced the latest</string>
+    <string name="personal_center">personal center</string>
+    <string name="buy_at_once">buy at once</string>
+    <string name="took_part_in">took part in</string>
+    <string name="to_be_announced">to be announced</string>
+    <string name="guess_you_like">guess you like</string>
+    <string name="beginner_guide">beginner guide</string>
+    <string name="find_goods">find goods</string>
+    <string name="recharge_center">recharge center</string>
+    <string name="show_all">show all</string>
+    <string name="hot_recommended">hot recommended</string>
+    <string name="lottery_winner">lottery winner:</string>
+    <string name="residue">reside</string>
+    <string name="all_classification">all classification</string>
+    <string name="value">value</string>
+    <string name="fast_shop_now">fast shop now</string>
+    <string name="my_cloud_and_purchasing_records">my cloud and purchasing records</string>
+    <string name="the_winning_record">the winning record</string>
+    <string name="recharge">recharge</string>
+    <string name="shipping_address">shipping address</string>
+    <string name="qr_code_to_download">qr code to download</string>
+    <string name="invite_code">invite code</string>
+    <string name="login">login</string>
+    <string name="register">register</string>
+    <string name="scanning_download_vehicle_to_purchase_the_official_App">scanning download vehicle to purchase the official app</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="login_by_weixin">login by weixin</string>
+    <string name="login_by_QQ">login by QQ</string>
+    <string name="fast_registet_by_phone">fast register by phone</string>
+    <string name="retrieve_password">retrieve password</string>
+    <string name="please_input_phone_number">please input phone number</string>
+    <string name="agree">agree</string>
+    <string name="minutes_for_user_registration_agreement">minutes for user registration agreement</string>
+    <string name="next_step">next step</string>
+    <string name="have_problem_you_can">have problem and you can</string>
+    <string name="contact_customer_service">contact customer service</string>
+</resources>
