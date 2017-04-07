@@ -2,6 +2,8 @@ package com.example.administrator.fastshop.view.activity;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
@@ -9,6 +11,14 @@ import com.ashokvarma.bottomnavigation.BadgeItem;
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 import com.example.administrator.fastshop.R;
+import com.example.administrator.fastshop.view.adapter.SectionsPagerAdapter;
+import com.example.administrator.fastshop.view.fragment.AllGoodsFragment;
+import com.example.administrator.fastshop.view.fragment.CartFragment;
+import com.example.administrator.fastshop.view.fragment.HomePageFragment;
+import com.example.administrator.fastshop.view.fragment.LatestFragment;
+import com.example.administrator.fastshop.view.fragment.PersonalCenterFragment;
+
+import java.util.ArrayList;
 
 import butterknife.ButterKnife;
 
@@ -20,7 +30,13 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
     ViewPager mainViewpager;
     BadgeItem badgeItem;
     BottomNavigationBar bottomNavigationBar;
-
+    HomePageFragment homePageFragment;
+    AllGoodsFragment allGoodsFragment;
+    CartFragment cartFragment;
+    LatestFragment latestFragment;
+    PersonalCenterFragment personalCenterFragment;
+    ArrayList<Fragment> fragments;
+    FragmentManager fragmentManager;
 
 
     @Override
@@ -42,6 +58,27 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
         bottomNavigationBar = (BottomNavigationBar) findViewById(R.id.main_bottomnavigaationbar);
         mainViewpager = (ViewPager) findViewById(R.id.main_viewpager);
         addItem();//添加底部菜单的方法
+        fragments = new ArrayList<>();
+        fragmentManager = getSupportFragmentManager();
+        setFragment();
+    }
+
+    private void setFragment() {
+        homePageFragment = new HomePageFragment();
+        allGoodsFragment = new AllGoodsFragment();
+        latestFragment = new LatestFragment();
+        cartFragment = new CartFragment();
+        personalCenterFragment = new PersonalCenterFragment();
+
+        fragments.add(homePageFragment);
+        fragments.add(allGoodsFragment);
+        fragments.add(latestFragment);
+        fragments.add(cartFragment);
+        fragments.add(personalCenterFragment);
+
+        mainViewpager.setAdapter(new SectionsPagerAdapter(fragmentManager,fragments));
+        mainViewpager.addOnPageChangeListener(this);
+        mainViewpager.setCurrentItem(0);
     }
 
     private void addItem() {
@@ -69,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
 
     @Override
     public void onTabSelected(int position) {
-        bottomNavigationBar.setAnimationDuration(position);
+        mainViewpager.setCurrentItem(position);
     }
 
     @Override
@@ -89,7 +126,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
 
     @Override
     public void onPageSelected(int position) {
-
+        bottomNavigationBar.selectTab(position);
     }
 
     @Override
