@@ -8,4 +8,8 @@
     <color name="titleColor">#FF7010</color>
     <color name="titleFind">#FF5E10</color>
     <color name="white">#ffff</color>
+    <color name="black">#1D1D1D</color>
+    <color name="pink">#FF4081</color>
+    <color name="blue">#2293F4</color>
+    <color name="bottomColor">#FF9CB78B</color>
 </resources>
