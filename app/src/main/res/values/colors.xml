@@ -12,4 +12,6 @@
     <color name="pink">#FF4081</color>
     <color name="blue">#2293F4</color>
     <color name="bottomColor">#FF9F8BB7</color>
+    <color name="loginColor">#999999</color>
+    <color name="divide_line">#D7D7D7</color>
 </resources>
