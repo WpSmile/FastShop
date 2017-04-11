@@ -1,13 +1,294 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.administrator.fastshop.view.fragment.PersonalCenterFragment">
+    tools:context="com.example.administrator.fastshop.view.fragment.PersonalCenterFragment"
+    android:orientation="vertical">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="4" />
 
-</FrameLayout>
+    <com.example.administrator.fastshop.view.views.MyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@color/titleColor">
+
+                <ImageView
+                    android:id="@+id/personal_center_image_avatar"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/icon_default_avatar"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"/>
+
+                <TextView
+                    android:id="@+id/personal_center_tv_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:layout_toEndOf="@+id/personal_center_image_avatar"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"/>
+                <ImageView
+                    android:id="@+id/personal_center_image_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_line"
+                    android:layout_toEndOf="@+id/personal_center_tv_login"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:id="@+id/personal_center_tv_registe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/register"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:layout_toEndOf="@+id/personal_center_image_line"
+                    android:layout_centerVertical="true"/>
+
+                <ImageView
+                    android:id="@+id/personal_center_image_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_setting"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/divide_line"/>
+
+            <RelativeLayout
+                android:id="@+id/cloud_and_purchasing_records_rl"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white">
+                <ImageView
+                    android:id="@+id/cloud_and_purchasing_records_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/icon_cloud_and_purchasing_records"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_cloud_and_purchasing_records"
+                    android:layout_toEndOf="@+id/cloud_and_purchasing_records_image"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="10dp"/>
+
+                <ImageView
+                    android:id="@+id/cloud_and_purchasing_records_image_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/icon_more"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"/>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divide_line"/>
+
+            <RelativeLayout
+                android:id="@+id/the_winning_record_rl"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white">
+                <ImageView
+                    android:id="@+id/the_winning_record_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/icon_winner_records"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/the_winning_record"
+                    android:layout_toEndOf="@+id/the_winning_record_image"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="10dp"/>
+
+                <ImageView
+                    android:id="@+id/the_winning_record_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/icon_more"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"/>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divide_line"/>
+
+            <RelativeLayout
+                android:id="@+id/recharge_rl"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white">
+                <ImageView
+                    android:id="@+id/recharge_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/icon_chongzhi"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/recharge"
+                    android:layout_toEndOf="@+id/recharge_image"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="10dp"/>
+
+                <ImageView
+                    android:id="@+id/recharge_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/icon_more"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"/>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divide_line"/>
+
+            <RelativeLayout
+                android:id="@+id/shipping_address_rl"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white">
+                <ImageView
+                    android:id="@+id/shipping_address_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/icon_address"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shipping_address"
+                    android:layout_toEndOf="@+id/shipping_address_image"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="10dp"/>
+
+                <ImageView
+                    android:id="@+id/shipping_address_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/icon_more"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"/>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/divide_line"/>
+
+            <RelativeLayout
+                android:id="@+id/qr_code_to_download_rl"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white">
+                <ImageView
+                    android:id="@+id/qr_code_to_download_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/icon_erwei_code"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/qr_code_to_download"
+                    android:layout_toEndOf="@+id/qr_code_to_download_image"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="10dp"/>
+
+                <ImageView
+                    android:id="@+id/qr_code_to_download_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/icon_more"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"/>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/divide_line"/>
+
+            <RelativeLayout
+                android:id="@+id/invite_code_rl"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white">
+                <ImageView
+                    android:id="@+id/invite_code_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/icon_yaoqing_code"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/invite_code"
+                    android:layout_toEndOf="@+id/invite_code_image"
+                    android:textSize="20sp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="10dp"/>
+
+                <ImageView
+                    android:id="@+id/invite_code_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/icon_more"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </com.example.administrator.fastshop.view.views.MyScrollView>
+
+
+
+</LinearLayout>

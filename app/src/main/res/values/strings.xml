@@ -47,6 +47,11 @@
     <string name="phone_number">phone number</string>
     <string name="verification_code">verification code</string>
     <string name="get_verification_code">get verification code</string>
+    <string name="minute">minute</string>
+    <string name="second_purchase">second purchase</string>
+    <string name="the_url">fmg100.cn</string>
+    <string name="cart_is_empty">your cart is empty</string>
+    <string name="go_shopping_now">go shopping now</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

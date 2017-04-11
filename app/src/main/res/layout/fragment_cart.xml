@@ -1,13 +1,55 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.administrator.fastshop.view.fragment.CartFragment">
+    tools:context="com.example.administrator.fastshop.view.fragment.CartFragment"
+    android:orientation="vertical">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/All_goods_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/titleColor"
+        android:text="@string/cart"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"/>
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="3" />
+        android:background="@color/allGoodsBackColor">
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/image_cart"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/icon_cart_image"
+            android:layout_centerInParent="true"
+            />
+
+        <TextView
+            android:id="@+id/cart_tv_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cart_is_empty"
+            android:layout_below="@+id/image_cart"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/titleColor"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/cart_tv_cart"
+            android:layout_marginTop="10dp"
+            android:text="@string/go_shopping_now"
+            android:textColor="@color/white"
+            android:padding="5dp"/>
+    </RelativeLayout>
+
+
+
+</LinearLayout>

@@ -47,4 +47,10 @@
     <string name="phone_number">手机号</string>
     <string name="verification_code">验证码</string>
     <string name="get_verification_code">获取验证码</string>
+    <string name="minute">分</string>
+    <string name="second_purchase">秒购</string>
+    <string name="the_url">fmg100.cn</string>
+    <string name="cart_is_empty">你的购物车空空如也</string>
+    <string name="go_shopping_now">马上去秒购</string>
+
 </resources>
