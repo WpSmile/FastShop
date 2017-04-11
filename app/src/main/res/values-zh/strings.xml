@@ -52,5 +52,23 @@
     <string name="the_url">fmg100.cn</string>
     <string name="cart_is_empty">你的购物车空空如也</string>
     <string name="go_shopping_now">马上去秒购</string>
+    <string name="setting">设置</string>
+
+    <string name="the_personal_data">个人资料</string>
+    <string name="safe_setting">安全设置</string>
+    <string name="help_center">帮助中心</string>
+    <string name="about_us">关于我们</string>
+    <string name="service_agreement">服务协议</string>
+    <string name="customer_service_hotline">客服热线</string>
+    <string name="clear_cache">清除缓存</string>
+    <string name="avatar">头像</string>
+    <string name="nickname">昵称</string>
+    <string name="sex">性别</string>
+    <string name="birthday">生日</string>
+    <string name="personal_sign">个性签名</string>
+    <string name="bind_inviter">绑定邀请人</string>
+    <string name="please_choose_pay_way">请选择支付方式</string>
+    <string name="consignee">收货人</string>
+
 
 </resources>

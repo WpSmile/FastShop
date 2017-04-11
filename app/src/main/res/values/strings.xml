@@ -52,6 +52,23 @@
     <string name="the_url">fmg100.cn</string>
     <string name="cart_is_empty">your cart is empty</string>
     <string name="go_shopping_now">go shopping now</string>
+    <string name="setting">setting</string>
+
+    <string name="the_personal_data">the personal data</string>
+    <string name="safe_setting">safe setting</string>
+    <string name="help_center">help center</string>
+    <string name="about_us">about us</string>
+    <string name="service_agreement">service agreement</string>
+    <string name="customer_service_hotline">customer service hotline</string>
+    <string name="clear_cache">clear cache</string>
+    <string name="avatar">avatar</string>
+    <string name="nickname">nickname</string>
+    <string name="sex">sex</string>
+    <string name="birthday">birthday</string>
+    <string name="personal_sign">personal sign</string>
+    <string name="bind_inviter">bind inviter</string>
+    <string name="please_choose_pay_way">please choose pay way</string>
+    <string name="consignee">consignee</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
