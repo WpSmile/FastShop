@@ -41,6 +41,12 @@
     <string name="next_step">next step</string>
     <string name="have_problem_you_can">have problem and you can</string>
     <string name="contact_customer_service">contact customer service</string>
+    <string name="use_username_login">use username login</string>
+    <string name="make_sure">make sure</string>
+    <string name="new_password">new password</string>
+    <string name="phone_number">phone number</string>
+    <string name="verification_code">verification code</string>
+    <string name="get_verification_code">get verification code</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
