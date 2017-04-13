@@ -39,6 +39,21 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
     ArrayList<Fragment> fragments;
     FragmentManager fragmentManager;
 
+    public ViewPager getMainViewpager() {
+        return mainViewpager;
+    }
+
+    public void setMainViewpager(ViewPager mainViewpager) {
+        this.mainViewpager = mainViewpager;
+    }
+
+    public BottomNavigationBar getBottomNavigationBar() {
+        return bottomNavigationBar;
+    }
+
+    public void setBottomNavigationBar(BottomNavigationBar bottomNavigationBar) {
+        this.bottomNavigationBar = bottomNavigationBar;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
