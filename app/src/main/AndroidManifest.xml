@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.administrator.fastshop">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -26,7 +26,8 @@
         <activity android:name=".view.activity.BeginerGuideActivity" />
         <activity android:name=".view.activity.TobeAnnouncedActivity" />
         <activity android:name=".view.activity.SettingActivity" />
-        <activity android:name=".view.activity.WinningRecordActivity"></activity>
+        <activity android:name=".view.activity.WinningRecordActivity" />
+        <activity android:name=".view.activity.RechargeActivity"></activity>
     </application>
 
 </manifest>

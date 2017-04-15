@@ -15,6 +15,7 @@ import com.bumptech.glide.Glide;
 import com.example.administrator.fastshop.R;
 import com.example.administrator.fastshop.view.activity.BeginerGuideActivity;
 import com.example.administrator.fastshop.view.activity.MainActivity;
+import com.example.administrator.fastshop.view.activity.RechargeActivity;
 import com.stx.xhb.xbanner.XBanner;
 import com.stx.xhb.xbanner.transformers.Transformer;
 
@@ -120,6 +121,9 @@ public class HomePageFragment extends Fragment implements XBanner.XBannerAdapter
                 startActivity(intent);
                 break;
             case R.id.home_rl_recharge:
+                Intent intent1 = new Intent();
+                intent1.setClass(getActivity(), RechargeActivity.class);
+                startActivity(intent1);
                 break;
 
         }
