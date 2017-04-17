@@ -15,4 +15,5 @@
     <color name="loginColor">#999999</color>
     <color name="divide_line">#D7D7D7</color>
     <color name="allGoodsBackColor">#EDEDED</color>
+    <color name="red">#FFF70414</color>
 </resources>

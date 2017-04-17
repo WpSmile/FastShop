@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_all_goods_ll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/item_all_goods_tv_image"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/item_image01"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/item_all_goods_tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_horizontal"
+        android:text="机械革命"
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/item_all_goods_tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:text="￥8999"
+        android:textColor="@color/red"
+        android:textSize="20sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/divide_line"
+        android:layout_margin="5dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/item_all_goods_tv_join"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="20sp"
+            android:layout_marginStart="5sp"/>
+
+        <TextView
+            android:id="@+id/item_all_goods_tv_shengyu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9999"
+            android:textColor="@color/red"
+            android:textSize="20sp"
+            android:layout_marginStart="5sp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已参与"
+            android:textSize="20sp"
+            android:layout_marginStart="5sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="剩余"
+            android:textSize="20sp"
+            android:layout_marginStart="5sp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:id="@+id/item_all_goods_tv_cart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/cart"
+            android:textColor="@color/red"
+            android:background="@drawable/item_botton_with_radius_and_biankuang"
+            android:textSize="20sp"
+            android:layout_marginStart="5sp"
+            android:padding="5dp"
+            android:gravity="center"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"/>
+
+        <TextView
+            android:id="@+id/item_all_goods_tv_buy_now"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/buy_at_once"
+            android:textColor="@color/white"
+            android:background="@drawable/item_botton_with_radius"
+            android:textSize="20sp"
+            android:layout_marginEnd="5sp"
+            android:padding="5dp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+</LinearLayout>
