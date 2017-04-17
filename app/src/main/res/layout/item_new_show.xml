@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/item_new_show_ll"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/item_new_show_image"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/item_image02"
+        android:layout_marginTop="5dp"/>
+    <TextView
+        android:id="@+id/item_new_show_tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="爱国者(AIGO)充电宝20000毫安"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="获奖用户:"/>
+        <TextView
+            android:id="@+id/item_new_show_tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="微微"
+            android:textColor="@color/blue"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="幸运号码:"/>
+        <TextView
+            android:id="@+id/item_new_show_tv_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10000146"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="参与次数:"/>
+        <TextView
+            android:id="@+id/item_new_show_tv_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="179"
+            android:textColor="@color/titleColor"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="揭晓时间:"/>
+        <TextView
+            android:id="@+id/item_new_show_tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2017-04-17 20:54"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -61,13 +61,12 @@ public class AllGoodsFragment extends Fragment implements View.OnClickListener {
         AllGoodsBean bean = new AllGoodsBean();
         bean.setImage(R.drawable.item_image01);
         bean.setGoodsName("机械革命");
-        bean.setGoodsPrice("￥8999");
         bean.setJoinNum("0");
         bean.setShengyuNum("999");
 
         for (int i = 0; i < 10; i++) {
             bean.setAllgoodsId(i + "");
-            bean.setGoodsPrice(i + "");
+            bean.setGoodsPrice("￥"+(i+1));
 
             allGoodsBeanArrayList.add(bean);
         }
