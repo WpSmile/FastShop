@@ -27,7 +27,8 @@
         <activity android:name=".view.activity.TobeAnnouncedActivity" />
         <activity android:name=".view.activity.SettingActivity" />
         <activity android:name=".view.activity.WinningRecordActivity" />
-        <activity android:name=".view.activity.RechargeActivity"></activity>
+        <activity android:name=".view.activity.RechargeActivity" />
+        <activity android:name=".view.activity.GoodsDetailsActivity"></activity>
     </application>
 
 </manifest>

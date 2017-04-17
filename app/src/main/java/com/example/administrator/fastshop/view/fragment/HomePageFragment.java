@@ -4,10 +4,14 @@ package com.example.administrator.fastshop.view.fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -16,6 +20,10 @@ import com.example.administrator.fastshop.R;
 import com.example.administrator.fastshop.view.activity.BeginerGuideActivity;
 import com.example.administrator.fastshop.view.activity.MainActivity;
 import com.example.administrator.fastshop.view.activity.RechargeActivity;
+import com.example.administrator.fastshop.view.adapter.LastestAdapter;
+import com.example.administrator.fastshop.view.bean.GoodsBean;
+import com.example.administrator.fastshop.view.views.DividerItemDecoration;
+import com.example.administrator.fastshop.view.views.SpaceItemDecoretion;
 import com.stx.xhb.xbanner.XBanner;
 import com.stx.xhb.xbanner.transformers.Transformer;
 
@@ -29,6 +37,13 @@ public class HomePageFragment extends Fragment implements XBanner.XBannerAdapter
     private XBanner xBanner;
     private ArrayList<String> imageUrl;
     RelativeLayout homeRlAllGoods, homeRlLastestRecom, homeRlBeginer, homeRlRecharge;
+    LinearLayout homeLlLastestShowAll, homeLlGuessYouLike, homeLlShowAtOnce;
+    RecyclerView homeLastestRecycler,homeGuessYouLikeRecycler,homeShowAtOnceRecycler;
+    ArrayList<GoodsBean> lastestList,guessYouLikeList,showAtOnceList;
+    LinearLayoutManager linearLayoutManager;
+    LastestAdapter lastestAdapter;
+    //GuessYouLikeAdapter guessYouLikeAdapter;
+    //ShowAtOnceAdapter showAtOnceAdapter;
 
     public HomePageFragment() {
         // Required empty public constructor
@@ -53,6 +68,9 @@ public class HomePageFragment extends Fragment implements XBanner.XBannerAdapter
         homeRlLastestRecom.setOnClickListener(this);
         homeRlBeginer.setOnClickListener(this);
         homeRlRecharge.setOnClickListener(this);
+        homeLlLastestShowAll.setOnClickListener(this);
+        homeLlGuessYouLike.setOnClickListener(this);
+        homeLlShowAtOnce.setOnClickListener(this);
     }
 
     private void initView(View view) {
@@ -85,6 +103,50 @@ public class HomePageFragment extends Fragment implements XBanner.XBannerAdapter
         homeRlLastestRecom = (RelativeLayout) view.findViewById(R.id.home_rl_lastest_recom);
         homeRlBeginer = (RelativeLayout) view.findViewById(R.id.home_rl_beginer);
         homeRlRecharge = (RelativeLayout) view.findViewById(R.id.home_rl_recharge);
+        homeLlLastestShowAll = (LinearLayout) view.findViewById(R.id.home_ll_lastest_show_all);
+        homeLlGuessYouLike = (LinearLayout) view.findViewById(R.id.home_ll_guess_you_like);
+        homeLlShowAtOnce = (LinearLayout) view.findViewById(R.id.home_ll_show_at_once);
+        homeLastestRecycler = (RecyclerView) view.findViewById(R.id.home_lastest_recycler);
+        homeGuessYouLikeRecycler = (RecyclerView) view.findViewById(R.id.home_guess_you_like_recycler);
+        homeShowAtOnceRecycler = (RecyclerView) view.findViewById(R.id.home_show_at_once_recycler);
+
+        initLastestView();
+    }
+
+
+    private void initLastestView() {
+        lastestList = new ArrayList<>();
+        GoodsBean bean = new GoodsBean();
+        for (int i = 0;i<10;i++){
+            bean.setGoodsId(i+"");
+            bean.setImage(R.drawable.item_image);
+            bean.setGoodsName("飞浦达(PHIPUDS)三刀剃须");
+            bean.setGoodsWinner("中奖者:张三");
+            lastestList.add(bean);
+        }
+
+
+        linearLayoutManager = new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false);
+        lastestAdapter = new LastestAdapter(getContext(),lastestList);
+        homeLastestRecycler.setLayoutManager(linearLayoutManager);
+        homeLastestRecycler.setAdapter(lastestAdapter);
+        homeLastestRecycler.setHasFixedSize(true);
+        homeLastestRecycler.addItemDecoration(new DividerItemDecoration(getContext(),linearLayoutManager.getOrientation()));
+
+        linearLayoutManager = new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false);
+        lastestAdapter = new LastestAdapter(getContext(),lastestList);
+        homeGuessYouLikeRecycler.setLayoutManager(linearLayoutManager);
+        homeGuessYouLikeRecycler.setAdapter(lastestAdapter);
+        homeGuessYouLikeRecycler.setHasFixedSize(true);
+        homeGuessYouLikeRecycler.addItemDecoration(new DividerItemDecoration(getContext(),linearLayoutManager.getOrientation()));
+
+        //GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(),2,LinearLayoutManager.VERTICAL,false);
+        linearLayoutManager = new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false);
+        lastestAdapter = new LastestAdapter(getContext(),lastestList);
+        homeShowAtOnceRecycler.setLayoutManager(linearLayoutManager);
+        homeShowAtOnceRecycler.setAdapter(lastestAdapter);
+        homeShowAtOnceRecycler.setHasFixedSize(true);
+        homeShowAtOnceRecycler.addItemDecoration(new DividerItemDecoration(getContext(),linearLayoutManager.getOrientation()));
     }
 
 
@@ -111,7 +173,6 @@ public class HomePageFragment extends Fragment implements XBanner.XBannerAdapter
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.home_rl_all_goods:
-
                 break;
             case R.id.home_rl_lastest_recom:
                 break;
@@ -125,7 +186,12 @@ public class HomePageFragment extends Fragment implements XBanner.XBannerAdapter
                 intent1.setClass(getActivity(), RechargeActivity.class);
                 startActivity(intent1);
                 break;
-
+            case R.id.home_ll_lastest_show_all:
+                break;
+            case R.id.home_ll_guess_you_like:
+                break;
+            case R.id.home_ll_show_at_once:
+                break;
         }
     }
 }
