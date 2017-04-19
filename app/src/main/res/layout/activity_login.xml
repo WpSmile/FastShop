@@ -54,7 +54,7 @@
             android:layout_height="match_parent"
             android:layout_toRightOf="@+id/login_tv_username"
             android:layout_marginLeft="10dp"
-            android:textCursorDrawable="@null"/>
+            android:background="@null"/>
     </RelativeLayout>
     <View
         android:id="@+id/login_view_divide_line"
@@ -90,7 +90,7 @@
             android:layout_height="match_parent"
             android:layout_toRightOf="@+id/login_tv_password"
             android:layout_marginLeft="10dp"
-            android:textCursorDrawable="@null"/>
+            android:background="@null"/>
     </RelativeLayout>
     <View
         android:id="@+id/login_divide_line"

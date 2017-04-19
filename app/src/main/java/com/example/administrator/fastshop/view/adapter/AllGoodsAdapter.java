@@ -42,10 +42,11 @@ public class AllGoodsAdapter extends RecyclerView.Adapter {
             public void onClick(View v) {
                 switch (v.getId()){
                     case R.id.item_all_goods_ll:
-                        int goodsId = (int) v.getTag();
+                        String goodsId = (String) v.getTag();
                         Intent intent = new Intent();
                         intent.putExtra("goodsId", goodsId);
                         intent.setClass(context, GoodsDetailsActivity.class);
+                        context.startActivity(intent);
                         break;
                     case R.id.item_all_goods_tv_cart:
                         break;

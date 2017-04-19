@@ -55,7 +55,7 @@
             android:hint="@string/find_goods"
             android:textSize="15sp"
             android:textColorHint="@color/white"
-            android:textCursorDrawable="@null"/>
+            android:background="@null"/>
     </RelativeLayout>
 
     <com.example.administrator.fastshop.view.views.MyScrollView

@@ -39,10 +39,11 @@ public class LastestAdapter extends RecyclerView.Adapter {
         onClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int goodsId = (int) v.getTag();
+                String goodsId = (String) v.getTag();
                 Intent intent = new Intent();
                 intent.putExtra("goodsId", goodsId);
                 intent.setClass(context, GoodsDetailsActivity.class);
+                context.startActivity(intent);
             }
         };
     }
